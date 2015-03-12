@@ -4,14 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Novo Status</title>
+<title>Cadastro de produto</title>
 </head>
 <body>
+<p>Cadastro de produtos</p></br>
 
-<form action="${linkTo[StatusController].salvar}" method="post">
-	<label>Nome</label><br/>
-	<input type="text" name="status.name"/>
-	<input type="submit" value="salvar"/>
+<form action="${linkTo[ProductController].salvar}" method="post">
+	<label>Nome:</label><br/>
+	<input type="text" name="products.name"/>
+	<input type="submit" value="Salvar"/>
 </form>
 </body>
 </html>
