@@ -22,7 +22,8 @@ public class AccountsImpl implements AccountsService{
 	@SuppressWarnings("deprecation")
 	@Override
 	public void save(Accounts accounts) {
-		Hashing.sha512().hashString(accounts.getPassword());
+		String senha = Hashing.sha512().hashString(accounts.getPassword()).toString();
+		accounts.setPassword(senha);
 		manager.persist(accounts);
 	}
 
@@ -43,5 +44,4 @@ public class AccountsImpl implements AccountsService{
 		Query query = manager.createQuery(pjql);
 		return query.getResultList();
 	}
-
 }

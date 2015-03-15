@@ -174,7 +174,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>controledebeneficios</finalName>
+		<finalName>systembugs</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

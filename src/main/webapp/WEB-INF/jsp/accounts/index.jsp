@@ -18,7 +18,7 @@ ${mensagem}
 	</thead>
 	
 	<tbody>
-		<c:forEach items="accounts" var="acc">
+		<c:forEach items="${accounts}" var="acc">
 			<tr>
 				<td>
 					${acc.name}
@@ -28,6 +28,6 @@ ${mensagem}
 	</tbody>
 </table>
 
-<a hreflang="${linkTo[AccountsController].form}">Cadastro de Usuários</a>
+<a href="${linkTo[AccountsController].form}">Cadastro de Usuários</a>
 </body>
 </html>
