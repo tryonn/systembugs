@@ -5,6 +5,9 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+
+import org.hibernate.procedure.internal.Util.ResultClassesResolutionContext;
 
 import com.google.common.hash.Hashing;
 import com.simaomenezes.systembugs.models.Accounts;
@@ -43,5 +46,13 @@ public class AccountsImpl implements AccountsService{
 		String pjql = "from Accounts order by name";
 		Query query = manager.createQuery(pjql);
 		return query.getResultList();
+	}
+
+	@Override
+	public Accounts verificaUserPassword(String name, String password) {
+		String jpql = "from Accounts where name = " + name + " and password = "+ password;
+		TypedQuery<Accounts> query = manager.createQuery(jpql, Accounts.class);
+		
+		return query.setParameter(name, name).setParameter(password, password).getSingleResult();
 	}
 }

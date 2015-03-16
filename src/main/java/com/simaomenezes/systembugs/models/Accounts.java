@@ -13,7 +13,7 @@ public class Accounts implements Serializable{
 	private static final long serialVersionUID = -4324845373324795653L;
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	private Integer id;
 	
 	private String name;

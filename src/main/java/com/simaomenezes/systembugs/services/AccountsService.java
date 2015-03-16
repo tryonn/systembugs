@@ -10,5 +10,7 @@ public interface AccountsService {
 	void edit(Accounts accounts);
 	void delete(Accounts accounts);
 	List<Accounts> listAll();
+	
+	Accounts verificaUserPassword(String name, String password);
 
 }
