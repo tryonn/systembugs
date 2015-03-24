@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/decorators">
+	<decorator name="decorator" page="decorators.jsp">
+		<pattern>/index/*</pattern>		
+	</decorator>
+	<exludes>
+		<pattern>*_format=json</pattern>
+		<pattern>*_format=xml</pattern>
+	</exludes>
+</decorators>

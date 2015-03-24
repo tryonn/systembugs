@@ -27,7 +27,7 @@ public class StatusController {
 	}
 	
 	@Get("/status")
-	public void index(){
+	public void index(){		
 		result.include("mensagem", "Lista de Status");
 		result.include("status", statusService.listAll());
 	}
